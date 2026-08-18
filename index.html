@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Shanky Singhaniya Tiffin Service | Saifai</title>
+
+<meta name="description"
+content="Shanky Singhaniya Tiffin Service - Fresh, hygienic and affordable home-style food in Saifai. Order your daily thali on WhatsApp.">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#080808;
+    color:white;
+}
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:#080808;
+    border-bottom:1px solid #333;
+    padding:15px 5%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:22px;
+    font-weight:bold;
+    color:#ffb000;
+}
+
+.logo span{
+    color:white;
+    display:block;
+    font-size:11px;
+    letter-spacing:2px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 12px;
+    font-size:15px;
+}
+
+nav a:hover{
+    color:#ffb000;
+}
+
+.btn{
+    display:inline-block;
+    background:#ffae00;
+    color:#111;
+    padding:14px 24px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
+    border:none;
+}
+
+.hero{
+    min-height:650px;
+    padding:90px 6%;
+    display:flex;
+    align-items:center;
+    background:
+    radial-gradient(circle at 80% 40%,#4b2b08 0%,#080808 45%);
+}
+
+.hero-text{
+    width:55%;
+}
+
+.badge{
+    display:inline-block;
+    border:1px solid #555;
+    padding:10px 18px;
+    border-radius:30px;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:62px;
+    line-height:1.05;
+}
+
+.hero h1 span{
+    color:#ffae00;
+}
+
+.hero p{
+    font-size:20px;
+    color:#ddd;
+    margin:25px 0;
+    line-height:1.6;
+}
+
+.features{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+    margin:25px 0;
+}
+
+.feature{
+    border:1px solid #444;
+    border-radius:15px;
+    padding:15px;
+    color:#ddd;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:15px;
+    margin-top:25px;
+}
+
+.dark-btn{
+    border:1px solid #666;
+    padding:14px 24px;
+    border-radius:30px;
+    color:white;
+    text-decoration:none;
+}
+
+section{
+    padding:70px 6%;
+}
+
+.title{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.title h2{
+    font-size:38px;
+    color:#ffae00;
+}
+
+.title p{
+    color:#aaa;
+    margin-top:10px;
+}
+
+.menu-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.card{
+    background:#111;
+    border:1px solid #333;
+    border-radius:20px;
+    overflow:hidden;
+    padding:25px;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-7px);
+    border-color:#ffae00;
+}
+
+.card h3{
+    color:#ffae00;
+    font-size:24px;
+}
+
+.price{
+    font-size:40px;
+    font-weight:bold;
+    margin:20px 0;
+}
+
+.card p{
+    color:#ccc;
+    line-height:1.7;
+}
+
+.offer{
+    margin-top:40px;
+    background:linear-gradient(135deg,#3b0808,#111);
+    border:1px solid #ffae00;
+    border-radius:20px;
+    padding:35px;
+    text-align:center;
+}
+
+.offer h2{
+    color:#ffae00;
+    font-size:35px;
+}
+
+.offer strong{
+    font-size:45px;
+}
+
+.about{
+    background:#101010;
+}
+
+.about-box{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+}
+
+.about-box p{
+    color:#ccc;
+    font-size:18px;
+    line-height:1.9;
+}
+
+.contact-box{
+    max-width:700px;
+    margin:auto;
+    text-align:center;
+    background:#111;
+    border:1px solid #333;
+    border-radius:25px;
+    padding:40px;
+}
+
+.contact-box h3{
+    font-size:30px;
+    color:#ffae00;
+    margin-bottom:20px;
+}
+
+.contact-box p{
+    margin:12px 0;
+    color:#ddd;
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    background:#050505;
+    border-top:1px solid #333;
+    color:#aaa;
+}
+
+.whatsapp{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    z-index:999;
+    background:#25D366;
+    color:white;
+    padding:15px 20px;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:bold;
+    box-shadow:0 5px 20px #000;
+}
+
+@media(max-width:800px){
+
+    header{
+        flex-direction:column;
+        gap:12px;
+    }
+
+    nav{
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    nav a{
+        margin:5px 8px;
+    }
+
+    .hero{
+        padding:60px 6%;
+        min-height:auto;
+    }
+
+    .hero-text{
+        width:100%;
+        text-align:center;
+    }
+
+    .hero h1{
+        font-size:42px;
+    }
+
+    .hero p{
+        font-size:17px;
+    }
+
+    .features{
+        justify-content:center;
+    }
+
+    .hero-buttons{
+        justify-content:center;
+        flex-wrap:wrap;
+    }
+
+    .menu-grid{
+        grid-template-columns:1fr;
+    }
+
+    section{
+        padding:55px 5%;
+    }
+
+    .title h2{
+        font-size:30px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+🍽️ SHANKY SINGHANIYA
+<span>TIFFIN SERVICE</span>
+</div>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#menu">Menu</a>
+<a href="#plans">Plans</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<a class="btn" href="https://wa.me/917055950435">
+💬 Order on WhatsApp
+</a>
+
+</header>
+
+
+<section class="hero" id="home">
+
+<div class="hero-text">
+
+<div class="badge">
+🏠 GHAR JAISA SHUDDH KHANA 🏠
+</div>
+
+<h1>
+Shanky Singhaniya<br>
+<span>Tiffin Service</span>
+</h1>
+
+<p>
+Pure & Hygienic Home-Cooked Food in Saifai.
+Fresh, delicious and affordable meals made with care.
+</p>
+
+<div class="features">
+
+<div class="feature">🏠 Ghar Jaisa Swad</div>
+<div class="feature">🥬 Fresh Food</div>
+<div class="feature">🚚 Timely Delivery</div>
+<div class="feature">✨ Weekly Special</div>
+
+</div>
+
+<div class="hero-buttons">
+
+<a class="btn" href="https://wa.me/917055950435">
+📱 Order Now
+</a>
+
+<a class="dark-btn" href="#menu">
+View Menu →
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section id="menu">
+
+<div class="title">
+<h2>🍱 Hamara Special Menu</h2>
+<p>Fresh food • Hygienic kitchen • Affordable prices</p>
+</div>
+
+<div class="menu-grid">
+
+<div class="card">
+<h3>🥗 Regular Thali</h3>
+<p>Daily Needs</p>
+
+<div class="price">₹80</div>
+
+<p>
+4 Roti + Rice + Dal + Seasonal Sabzi + Salad
+</p>
+
+<br>
+
+<a class="btn" href="https://wa.me/917055950435?text=Hello%20Shanky%20Singhaniya,%20mujhe%20Regular%20Thali%20order%20karni%20hai.">
+Order Now
+</a>
+</div>
+
+
+<div class="card">
+<h3>🍛 Special Thali</h3>
+<p>Weekend Special</p>
+
+<div class="price">₹110</div>
+
+<p>
+4 Ghee Roti + Special Rice + Dal Tadka + Paneer Sabzi + Sweet/Raita
+</p>
+
+<br>
+
+<a class="btn" href="https://wa.me/917055950435?text=Hello,%20mujhe%20Special%20Thali%20order%20karni%20hai.">
+Order Now
+</a>
+</div>
+
+
+<div class="card">
+<h3>🥘 Light Thali</h3>
+<p>Patients / Attendants</p>
+
+<div class="price">₹60</div>
+
+<p>
+Simple Dal + Sabzi + Roti with light masala.
+</p>
+
+<br>
+
+<a class="btn" href="https://wa.me/917055950435?text=Hello,%20mujhe%20Light%20Thali%20order%20karni%20hai.">
+Order Now
+</a>
+</div>
+
+</div>
+
+</section>
+
+
+<section id="plans">
+
+<div class="title">
+<h2>💰 Special Plans & Offers</h2>
+<p>Save more with our daily and monthly plans</p>
+</div>
+
+<div class="offer">
+
+<h2>Lunch + Dinner</h2>
+
+<p>2 Thali per day</p>
+
+<strong>₹130 / Day</strong>
+
+<p>Perfect for students, staff and regular customers.</p>
+
+<br>
+
+<a class="btn" href="https://wa.me/917055950435?text=Hello,%20mujhe%20Lunch%20%2B%20Dinner%20plan%20ke%20baare%20me%20jankari%20chahiye.">
+📱 Ask on WhatsApp
+</a>
+
+</div>
+
+<div class="offer">
+
+<h2>🎁 Special Launch Offer</h2>
+
+<p>First 3 Thali orders par</p>
+
+<strong>50% OFF</strong>
+
+<p>Monthly subscription par special discount available.</p>
+
+</div>
+
+</section>
+
+
+<section class="about" id="about">
+
+<div class="about-box">
+
+<div class="title">
+<h2>❤️ Why Choose Us?</h2>
+</div>
+
+<p>
+Shanky Singhaniya Tiffin Service ka goal hai aapko
+ghar jaisa swad, fresh ingredients aur hygienic food
+provide karna. Hum Saifai area mein students,
+doctors, staff, patients aur attendants ke liye
+affordable tiffin service provide karte hain.
+</p>
+
+</div>
+
+</section>
+
+
+<section id="contact">
+
+<div class="title">
+<h2>📍 Contact & Delivery</h2>
+</div>
+
+<div class="contact-box">
+
+<h3>Shanky Singhaniya Tiffin Service</h3>
+
+<p>📍 Delivery: Saifai, PGI Campus, Hostels & Nearby Areas</p>
+
+<p>📞 Phone: +91 7055950435</p>
+
+<p>📱 WhatsApp: +91 7055950435</p>
+
+<br>
+
+<a class="btn" href="https://wa.me/917055950435">
+💬 WhatsApp for Order
+</a>
+
+</div>
+
+</section>
+
+
+<footer>
+
+❤️ Ek Baar Khaoge, Baar Baar Mangaoge! ❤️
+
+<br><br>
+
+© 2026 Shanky Singhaniya Tiffin Service
+
+</footer>
+
+
+<a class="whatsapp" href="https://wa.me/917055950435">
+💬 WhatsApp
+</a>
+
+</body>
+</html>
